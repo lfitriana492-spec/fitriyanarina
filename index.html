@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Siswa Baru - MTS RAUDLATUL HUDA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>MTS RAUDLATUL HUDA</h1>
+                <p class="subtitle">Madrasah Tsanawiyah Raudlatul Huda</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2>Formulir Pendaftaran Siswa Baru</h2>
+                    <p>Tahun Ajaran 2024/2025</p>
+                </div>
+
+                <form id="registrationForm" class="registration-form">
+                    <!-- Informasi Pribadi -->
+                    <fieldset>
+                        <legend>Informasi Pribadi</legend>
+
+                        <div class="form-group">
+                            <label for="fullName">Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap" required>
+                            <small class="example-text">Contoh: Rina Fitriyana</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">Tanggal Lahir <span class="required">*</span></label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Jenis Kelamin <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Laki-laki" required>
+                                    Laki-laki
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="Perempuan" required>
+                                    Perempuan
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="placeOfBirth">Tempat Lahir <span class="required">*</span></label>
+                            <input type="text" id="placeOfBirth" name="placeOfBirth" placeholder="Masukkan tempat lahir" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nik">NIK (Nomor Induk Kependudukan) <span class="required">*</span></label>
+                            <input type="text" id="nik" name="nik" placeholder="Masukkan NIK (16 digit)" maxlength="16" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="religion">Agama <span class="required">*</span></label>
+                            <select id="religion" name="religion" required>
+                                <option value="">-- Pilih Agama --</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Buddha">Buddha</option>
+                                <option value="Konghucu">Konghucu</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <!-- Informasi Orang Tua -->
+                    <fieldset>
+                        <legend>Informasi Orang Tua/Wali</legend>
+
+                        <div class="form-group">
+                            <label for="fatherName">Nama Ayah <span class="required">*</span></label>
+                            <input type="text" id="fatherName" name="fatherName" placeholder="Masukkan nama ayah" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motherName">Nama Ibu <span class="required">*</span></label>
+                            <input type="text" id="motherName" name="motherName" placeholder="Masukkan nama ibu" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guardianName">Nama Wali (jika ada)</label>
+                            <input type="text" id="guardianName" name="guardianName" placeholder="Masukkan nama wali (opsional)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="parentPhone">Nomor Telepon Orang Tua <span class="required">*</span></label>
+                            <input type="tel" id="parentPhone" name="parentPhone" placeholder="Masukkan nomor telepon" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- Informasi Alamat -->
+                    <fieldset>
+                        <legend>Alamat</legend>
+
+                        <div class="form-group">
+                            <label for="address">Alamat Lengkap <span class="required">*</span></label>
+                            <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="province">Provinsi <span class="required">*</span></label>
+                                <input type="text" id="province" name="province" placeholder="Masukkan provinsi" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Kabupaten/Kota <span class="required">*</span></label>
+                                <input type="text" id="city" name="city" placeholder="Masukkan kab/kota" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subdistrict">Kecamatan <span class="required">*</span></label>
+                                <input type="text" id="subdistrict" name="subdistrict" placeholder="Masukkan kecamatan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postalCode">Kode Pos <span class="required">*</span></label>
+                                <input type="text" id="postalCode" name="postalCode" placeholder="Masukkan kode pos" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Informasi Sekolah Asal -->
+                    <fieldset>
+                        <legend>Informasi Sekolah Asal</legend>
+
+                        <div class="form-group">
+                            <label for="previousSchool">Nama Sekolah Asal <span class="required">*</span></label>
+                            <input type="text" id="previousSchool" name="previousSchool" placeholder="Masukkan nama sekolah asal" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="previousSchoolYear">Tahun Lulus <span class="required">*</span></label>
+                            <input type="number" id="previousSchoolYear" name="previousSchoolYear" placeholder="Contoh: 2024" min="2000" max="2099" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="averageScore">Rata-rata Nilai Rapor <span class="required">*</span></label>
+                            <input type="number" id="averageScore" name="averageScore" placeholder="Masukkan rata-rata nilai" step="0.01" min="0" max="100" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- Informasi Tambahan -->
+                    <fieldset>
+                        <legend>Informasi Tambahan</legend>
+
+                        <div class="form-group">
+                            <label for="achievements">Prestasi/Penghargaan (opsional)</label>
+                            <textarea id="achievements" name="achievements" rows="3" placeholder="Daftar prestasi atau penghargaan (opsional)"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hobbies">Hobi/Minat <span class="required">*</span></label>
+                            <input type="text" id="hobbies" name="hobbies" placeholder="Contoh: Olahraga, Seni, Musik" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                Saya setuju dengan syarat dan ketentuan pendaftaran
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Tombol Submit -->
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+                        <button type="reset" class="btn btn-secondary">Bersihkan Form</button>
+                    </div>
+                </form>
+
+                <!-- Loading Animation -->
+                <div id="loadingMessage" class="loading-message" style="display: none;">
+                    <div class="spinner"></div>
+                    <h3>Memproses Data Pendaftaran...</h3>
+                    <p>Mohon tunggu, data Anda sedang diverifikasi</p>
+                </div>
+
+                <!-- Data Preview -->
+                <div id="dataPreview" class="data-preview" style="display: none;">
+                    <h3>✓ Data Pendaftaran Diterima!</h3>
+                    <p class="preview-subtitle">Berikut adalah data yang telah Anda daftarkan:</p>
+                    
+                    <div class="preview-grid">
+                        <div class="preview-section">
+                            <h4>📋 Informasi Pribadi</h4>
+                            <div class="preview-item">
+                                <span class="preview-label">Nama Lengkap:</span>
+                                <span class="preview-value" id="previewFullName">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Tanggal Lahir:</span>
+                                <span class="preview-value" id="previewBirthDate">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Tempat Lahir:</span>
+                                <span class="preview-value" id="previewPlaceOfBirth">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Jenis Kelamin:</span>
+                                <span class="preview-value" id="previewGender">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">NIK:</span>
+                                <span class="preview-value" id="previewNIK">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Agama:</span>
+                                <span class="preview-value" id="previewReligion">-</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4>👨‍👩‍👧 Orang Tua/Wali</h4>
+                            <div class="preview-item">
+                                <span class="preview-label">Nama Ayah:</span>
+                                <span class="preview-value" id="previewFatherName">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Nama Ibu:</span>
+                                <span class="preview-value" id="previewMotherName">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Nomor Telepon:</span>
+                                <span class="preview-value" id="previewParentPhone">-</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4>📍 Alamat</h4>
+                            <div class="preview-item">
+                                <span class="preview-label">Alamat Lengkap:</span>
+                                <span class="preview-value" id="previewAddress">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Kota:</span>
+                                <span class="preview-value" id="previewCity">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Kode Pos:</span>
+                                <span class="preview-value" id="previewPostalCode">-</span>
+                            </div>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4>🎓 Sekolah Asal</h4>
+                            <div class="preview-item">
+                                <span class="preview-label">Nama Sekolah:</span>
+                                <span class="preview-value" id="previewPreviousSchool">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Tahun Lulus:</span>
+                                <span class="preview-value" id="previewPreviousSchoolYear">-</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Rata-rata Nilai:</span>
+                                <span class="preview-value" id="previewAverageScore">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <h3>✅ Pendaftaran Berhasil!</h3>
+                    <p>Terima kasih telah mendaftar di MTS RAUDLATUL HUDA.</p>
+                    <p>Data Anda telah kami terima dan akan diproses dalam waktu 1-2 hari kerja.</p>
+                    <p class="text-info">Kami akan menghubungi Anda melalui nomor telepon yang terdaftar.</p>
+                    <button class="btn btn-primary" onclick="location.reload()">Daftar Lagi</button>
+                </div>
+            </div>
+
+            <!-- Info Sekolah -->
+            <aside class="info-section">
+                <h3>Informasi Sekolah</h3>
+                <div class="info-box">
+                    <h4>MTS RAUDLATUL HUDA</h4>
+                    <p><strong>Nama Pendaftar Contoh:</strong> Rina Fitriyana</p>
+                    <hr>
+                    <p><strong>Alamat:</strong><br>Jl. Pendidikan No. 123<br>Kudus, Jawa Tengah 59300</p>
+                    <p><strong>Telepon:</strong><br>(0291) 123-4567</p>
+                    <p><strong>Email:</strong><br>info@mtshuda.sch.id</p>
+                    <hr>
+                    <h5>Persyaratan Pendaftaran:</h5>
+                    <ul>
+                        <li>Lulusan SD/MI tahun 2024</li>
+                        <li>Fotokopi ijazah</li>
+                        <li>Fotokopi akta kelahiran</li>
+                        <li>Fotokopi kartu keluarga</li>
+                        <li>Pas foto 3x4 (2 lembar)</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 MTS RAUDLATUL HUDA. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
